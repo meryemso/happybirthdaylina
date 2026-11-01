@@ -12,15 +12,18 @@ $(document).ready(function() {
     btn_reset.click(function() {
         close();
     });
-
+ var song = document.getElementById("Eva-Anniversaire(Audio Officiel)");
     function open() {
         envelope.addClass("open")
             .removeClass("close");
+         song.play();
     }
 
     function close() {
         envelope.addClass("close")
             .removeClass("open");
+          song.pause();
+    song.currentTime = 0;
     }
 
 })
